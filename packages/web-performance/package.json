@@ -1,0 +1,33 @@
+{
+  "name": "front-monitor-web-performance",
+  "version": "1.0.0",
+  "description": "前端稳定性监控--web性能监控",
+  "main": "dist/index.global.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.global.js",
+  "scripts": {
+    "build": "encode-bundle src/index.ts --format iife,cjs,esm --dts --minify --global-name frontMonitor",
+    "clean": "rimraf dist node_modules"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "monitor",
+    "performance"
+  ],
+  "author": "zhengzl",
+  "license": "ISC",
+  "dependencies": {
+    "front-monitor-browser": "workspace:^",
+    "front-monitor-react": "workspace:^",
+    "front-monitor-vue": "workspace:^",
+    "core-js": "^3.19.1",
+    "path-to-regexp": "^6.2.0"
+  },
+  "devDependencies": {
+    "encode-bundle": "^1.4.1"
+  }
+}

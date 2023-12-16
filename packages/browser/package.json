@@ -1,0 +1,32 @@
+{
+  "name": "front-monitor-browser",
+  "version": "1.0.0",
+  "description": "稳定性监控--浏览器端页面监控",
+  "main": "dist/index.global.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.global.js",
+  "scripts": {
+    "build": "encode-bundle src/index.ts --format iife,cjs,esm --dts --minify --global-name frontMonitor",
+    "clean": "rimraf dist node_modules"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "monitor",
+    "browser"
+  ],
+  "author": "zhengzl",
+  "license": "ISC",
+  "dependencies": {
+    "front-monitor-shared": "workspace:^",
+    "front-monitor-types": "workspace:^",
+    "front-monitor-utils": "workspace:^",
+    "front-monitor-core": "workspace:^"
+  },
+  "devDependencies": {
+    "encode-bundle": "^1.4.1"
+  }
+}
